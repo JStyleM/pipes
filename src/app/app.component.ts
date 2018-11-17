@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nombre = 'Jhonatan';
+  numero = Math.PI;
+  num = 0.523;
 }
