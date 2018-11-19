@@ -48,8 +48,60 @@
                         <td>percent:'.0-2'</td>
                         <td>{{ num | percent:'.0-2' }}</td>
                     </tr>
+                    <tr>
+                        <td>{{ salario }}</td>
+                        <td>currency</td>
+                        <td>{{ salario | currency }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ salario }}</td>
+                        <td>currency:'EUR'</td>
+                        <td>{{ salario | currency:'EUR' }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ promesa }}</td>
+                        <td>async</td>
+                        <td>{{ promesa | async }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ fecha }}</td>
+                        <td>date</td>
+                        <td>{{ fecha | date }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ fecha }}</td>
+                        <td>date:'medium'</td>
+                        <td>{{ fecha | date:'medium' }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ fecha }}</td>
+                        <td>date:'MMMM - dd'</td>
+                        <td>{{ fecha | date:'MMMM - dd' }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ nombre2 }}</td>
+                        <td>capitalizado</td>
+                        <td>{{ nombre2 | capitalizado }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ clave }}</td>
+                        <td>contrasena: {{ activar }} <br> <button (click)='activar = !activar' class="btn btn-outline-primary">Activar/Desactivar</button></td>
+                        <td>{{ clave | contrasena:activar }}</td>
+                    </tr>
                 </tbody>
             </table>
+            <hr>
+            <br>
+            <h4>JSON</h4>
+            <pre>
+                {{ Persona | json}}
+            </pre>
+            <br>
+            <h4>Youtube <small>video</small></h4>
+            <hr>
+            <iframe width="560" height="315" [src]="video | domseguro: 'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+            <br>
         </div>
     </div>
 </div>
